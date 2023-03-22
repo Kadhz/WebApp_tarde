@@ -25,7 +25,20 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                        <li class="nav-item"> <a href="/home/login" class="nav-link text-dark"> Login </a>  </li>
+                        <li class="nav-item"> <a href="/home/login" class="nav-link text-dark"> Login </a>
+                            </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Clientes</a></li>
+                                <li><a class="dropdown-item" href="#">Produtos</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li> <a class="dropdown-item" href="/Usuarios/Cadastros">Usuarios</a></li>
+                                <li> <a class="dropdown-item" href="/Usuarios/Index">Lista de usuarios</a></li>
+                        </li>
                     </ul>
                 </div>
             </div>
