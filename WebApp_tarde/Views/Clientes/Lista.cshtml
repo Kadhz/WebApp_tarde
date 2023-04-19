@@ -1,4 +1,7 @@
-﻿<div class="card">
+﻿@model List<WebApp_tarde.Models.ClientesViewModel>
+
+
+<div class="card">
     <div class="card-header">
         <h2>Lista de Clientes</h2>
     </div>
@@ -42,48 +45,30 @@
             </thead>
 
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Carlos</td>
-                    <td>16 98834-5560</td>
-                    <td>
-                        <a href="/clientes/editar/1" class="btn btn-warning">Editar</a>
-                        <a href="/clientes/excluir/1" class="btn btn-danger">Excluir</a>
-                        <a href="/clientes/compras/1" class="btn btn-info">Lista de compras</a>
-                    </td>
-                </tr>
+                @foreach (var cliente in Model)
+                {
+                    <tr>
+                        <td>
+                            @cliente.Id
+                        </td>
+                        <td>
+                            @cliente.Nome
+                        </td>
+                        <td>
+                            @cliente.Telefone
+                        </td>
 
-                <tr>
-                    <td>2</td>
-                    <td>Marcella</td>
-                    <td>16 98833-8700</td>
-                    <td>
-                        <a href="/clientes/editar/2" class="btn btn-warning">Editar</a>
-                        <a href="/clientes/excluir/2" class="btn btn-danger">Excluir</a>
-                        <a href="/clientes/compras/2" class="btn btn-info">Lista de compras</a>
-                    </td>
-                </tr>
+                        <td>3</td>
+                        <td>Jonas</td>
+                        <td>16 98844-2560</td>
+                        <td>
+                            <a href="/clientes/editar/@cliente.Id" class="btn btn-warning">Editar</a>
+                            <a href="/clientes/excluir/@cliente.Id" class="btn btn-danger">Excluir</a>
+                            <a href="/clientes/compras/@cliente.Id" class="btn btn-info">Lista de compras</a>
+                        </td>
 
-                <tr>
-                    <td>3</td>
-                    <td>Jonas</td>
-                    <td>16 98844-2560</td>
-                    <td>
-                        <a href="/clientes/editar/3" class="btn btn-warning">Editar</a>
-                        <a href="/clientes/excluir/3" class="btn btn-danger">Excluir</a>
-                        <a href="/clientes/compras/3" class="btn btn-info">Lista de compras</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Mariana</td>
-                    <td>16 98845-5669</td>
-                    <td>
-                        <a href="/clientes/editar/4" class="btn btn-warning">Editar</a>
-                        <a href="/clientes/excluir/4" class="btn btn-danger">Excluir</a>
-                        <a href="/clientes/compras/4-" class="btn btn-info">Lista de compras</a>
-                    </td>
-                </tr>
+                    </tr>    
+                }
 
             </tbody>
 
