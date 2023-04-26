@@ -30,7 +30,7 @@ namespace WebApp_tarde.Controllers
 
             return View(db);
 
-
+           
         }
         public IActionResult Cadastro()
         {

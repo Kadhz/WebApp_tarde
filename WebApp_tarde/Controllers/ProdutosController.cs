@@ -4,9 +4,14 @@ namespace WebApp_tarde.Controllers
 {
     public class ProdutosController : Controller
     {
+        private readonly Contexto db;
+        public ProdutosController(Contexto opt)
+        {
+            db = opt;
+        }
         public IActionResult ListaProduto()
         {
-            return View();
+            return View( db.Produtos.ToList() );
         }
         public IActionResult CadastroProduto()
         {

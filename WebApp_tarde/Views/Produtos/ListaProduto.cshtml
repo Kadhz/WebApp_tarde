@@ -1,4 +1,8 @@
-﻿<div class="card">
+﻿@model List<WebApp_tarde.Entidades.ProdutoEntidade>
+
+
+
+<div class="card">
     <div class="card-header">
         <h2>Lista de produtos</h2>
     </div>
@@ -40,78 +44,28 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Açucar</td>
-                    <td>13.99</td>
-                    <td>15</td>
-                    <td>
-                        <a href="produtos/editar/1" class="btn btn-warning">
-                            Editar produto 1
-                        </a>
-
-                        <a href="produtos/excluir/1" class="btn btn-danger">
-                            Excluir produto 1
-                        </a>
-
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>2</td>
-                    <td>Manteiga</td>
-                    <td>5.99</td>
-                    <td>10</td>
-                    <td>
-                        <a href="produtos/editar/2" class="btn btn-warning">
-                            Editar produto 2
-                        </a>
-
-                        <a href="produtos/excluir/2" class="btn btn-danger">
-                            Excluir produto 2
-                        </a>
+                @foreach (var produto in Model)
+                {
+                    <tr>
+                        <td>
+                            @produto.Id
+                        </td>
+                        <td>
+                            @produto.Descricao
+                        </td>
+                        <td>
+                            @produto.Valor
+                        </td>
 
 
+                        <td>
+                            <a href="/produtos/editar/@produto.Id" class="btn btn-warning">Editar</a>
+                            <a href="/produtos/excluir/@produto.Id" class="btn btn-danger">Excluir</a>
+                        </td>
 
-                    </td>
-                    
+                    </tr>
+                }
 
-                </tr>
-
-                <tr>
-                    <td>3</td>
-                    <td>KG Colchão Mole</td>
-                    <td>39.99</td>
-                    <td>15</td>
-                    <td>
-                        <a href="produtos/editar/3" class="btn btn-warning">
-                            Editar produto 3
-                        </a>
-
-                        <a href="produtos/excluir/3" class="btn btn-danger">
-                            Excluir produto 3
-                        </a>
-
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>4</td>
-                    <td>Arroz</td>
-                    <td>13.99</td>
-                    <td>20</td>
-                    <td>
-                        <a href="produtos/editar/4" class="btn btn-warning">
-                            Editar produto 4
-                        </a>
-
-                        <a href="produtos/excluir/4" class="btn btn-danger">
-                            Excluir produto 4
-                        </a>
-
-
-                   
-                </tr>
             </tbody>
 
 
