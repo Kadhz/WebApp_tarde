@@ -22,27 +22,47 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                        <li class="nav-link">
+                            
+                        
                         <li class="nav-item"> <a href="/home/login" class="nav-link text-dark"> Login </a>
                             </li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
+                                Cadastro
                             </a>
                             <ul class="dropdown-menu">
                  
                                 <li><hr class="dropdown-divider"></li>
-                                <li> <a class="dropdown-item" href="/Usuarios/Cadastros">Usuarios</a></li>
+                                <li> <a class="dropdown-item" href="/Usuarios/Cadastros">Cadastro usuarios</a></li>
+                               
+                                
+                                <li> <a class="dropdown-item" href="/Fornecedores/CadastroFornecedores">Cadastro Fornecedores</a></li>
+                               
+                                <li> <a class="dropdown-item" href="/Produtos/CadastroProduto">Cadastro de Produtos</a></li>
+                                
+                                <li><a href="/Permissao/Cadastro" class="nav-link text-dark"> Cadastro de Permissões</a></li>
+                                <li><a href="/Categorias/Cadastro" class="nav-link text-dark"> Cadastro de Categorias</a></li>
+                    </ul>
+
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Lista
+                            </a>
+                            <ul class="dropdown-menu">
+
+                                <li><hr class="dropdown-divider"></li>
+                                
                                 <li> <a class="dropdown-item" href="/Usuarios/Index">Lista de usuarios</a></li>
                                 <li class="nav-link"><a href="/clientes/lista" class="nav-link text-dark"> Lista clientes</a></li>
-                                <li> <a class="dropdown-item" href="/Fornecedores/CadastroFornecedores">Cadastro Fornecedores</a></li>
+                                
                                 <li> <a class="dropdown-item" href="/Fornecedores/ListaFornecedores">Lista Fornecedores</a></li>
-                                <li> <a class="dropdown-item" href="/Produtos/CadastroProduto">Cadastro de Produtos</a></li>
+                                
                                 <li> <a class="dropdown-item" href="/Produtos/ListaProduto">Lista de Produtos</a></li>
-                    </ul>
+                                
+                            </ul>
                 </div>
             </div>
         </nav>
